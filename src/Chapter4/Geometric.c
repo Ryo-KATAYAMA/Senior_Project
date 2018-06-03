@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"MT.h" //メルセンヌ・ツイスタ使う
+#include"MT.h" //メルセンヌ・ツイスタという乱数生成プログラム使ってます、詳しくはググって
 int main(){
   int l,m,n=0;
   double a,b,c,d,e,f,g,h,i,j=0;
@@ -8,7 +8,7 @@ int main(){
 	  for(m=0;m<10000;m++){		  
     	  if(x>0.003){
 	    	  n++;
-		      x=genrand_real3();//乱数呼び出し
+		      x=genrand_real3();//一様乱数(0,1)呼び出し
 	      }
 	      else{
         	  if(n<100){
@@ -41,8 +41,8 @@ int main(){
     	      else if(n<1000){
 	    	      j++;
     	      }
-    	      init_genrand(n);//乱数の初期化、()に異なる数字を入れると乱数も変わるとか。
-    	      break;//whileダメだったからfor文でゴリ押してwhileのまね事してます
+    	      init_genrand(n);//乱数の初期化、()に異なる数字を入れると乱数も変わるらしいです
+    	      break;//whileダメだったからfor文でゴリ押してwhileのまね事してます、結果は変わらずでしたが…
 		  }
 	  }
   }
