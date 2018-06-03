@@ -5,11 +5,11 @@ int main(){
   double a,b,c,d,e,f,g,h,i,j=0;
   double x=1.0;
   for(l=0;l<1000;l++){
+      init_genrand(l);//乱数の初期化。()内の数値(int型)で出てくる乱数を変更できるとか
       while(x>0.003){
 	      n++;
 		  x=genrand_real3();//(0,1)の一様乱数。
 	  }
-	  init_genrand(n);//()内の数値(int型)で乱数を変更できるとか
        if(n<100){
     	  a++;
 	      }
